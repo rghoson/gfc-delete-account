@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delete Account – Global Football Challenge</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0a0f1e; color: #e8eaf0; font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; padding: 0 0 60px 0; }
+    header { background: linear-gradient(135deg, #0d1f3c 0%, #1a3a6b 100%); border-bottom: 3px solid #2ecc71; padding: 28px 24px; text-align: center; }
+    header .badge { display: inline-block; background: #2ecc71; color: #0a0f1e; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; }
+    header h1 { font-size: 26px; font-weight: 800; color: #ffffff; line-height: 1.2; }
+    header p { margin-top: 8px; color: #8fa3c0; font-size: 14px; }
+    .container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+    .section { margin-top: 36px; }
+    .section-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #2ecc71; margin-bottom: 14px; }
+    .card { background: #111827; border: 1px solid #1e2d45; border-radius: 12px; padding: 24px; }
+    .card h2 { font-size: 17px; font-weight: 700; color: #ffffff; margin-bottom: 16px; }
+    .steps { list-style: none; counter-reset: step; }
+    .steps li { counter-increment: step; display: flex; gap: 14px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid #1e2d45; font-size: 15px; color: #c5d0e0; line-height: 1.5; }
+    .steps li:last-child { border-bottom: none; padding-bottom: 0; }
+    .steps li::before { content: counter(step); min-width: 28px; height: 28px; background: #2ecc71; color: #0a0f1e; border-radius: 50%; font-size: 13px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+    .data-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .data-table th { text-align: left; padding: 10px 12px; background: #0d1f3c; color: #8fa3c0; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #1e2d45; }
+    .data-table td { padding: 12px; border-bottom: 1px solid #1a2540; color: #c5d0e0; vertical-align: top; line-height: 1.5; }
+    .data-table tr:last-child td { border-bottom: none; }
+    .tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; letter-spacing: 0.5px; }
+    .tag-deleted { background: #2d1515; color: #e74c3c; }
+    .tag-retained { background: #1a2d1a; color: #2ecc71; }
+    .warning-box { background: #1a1000; border: 1px solid #f39c12; border-left: 4px solid #f39c12; border-radius: 8px; padding: 16px 18px; font-size: 14px; color: #f5c842; line-height: 1.6; margin-top: 12px; }
+    .contact-box { background: #0d1f3c; border: 1px solid #1e3a6e; border-radius: 12px; padding: 22px 24px; margin-top: 36px; font-size: 14px; color: #8fa3c0; line-height: 1.7; }
+    .contact-box a { color: #2ecc71; text-decoration: none; font-weight: 600; }
+    .contact-box strong { color: #ffffff; }
+    footer { margin-top: 48px; text-align: center; font-size: 12px; color: #3a4f6a; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="badge">Account Management</div>
+    <h1>Delete Your Account</h1>
+    <p>Global Football Challenge – GFC</p>
+  </header>
+  <div class="container">
+    <div class="section">
+      <div class="section-label">How to Delete</div>
+      <div class="card">
+        <h2>Steps to delete your account in the app</h2>
+        <ol class="steps">
+          <li>Open the <strong>Global Football Challenge</strong> app and sign in to your account.</li>
+          <li>Tap your <strong>Profile</strong> icon in the top corner of the home screen.</li>
+          <li>Scroll down and tap <strong>Settings</strong>.</li>
+          <li>Tap <strong>Delete Account</strong> at the bottom of the Settings screen.</li>
+          <li>Read the confirmation message, then tap <strong>Confirm Delete</strong> to permanently remove your account.</li>
+        </ol>
+        <div class="warning-box">⚠️ This action is permanent. Once your account is deleted, it cannot be recovered. All your ranking, match history, and progress will be lost.</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-label">Your Data</div>
+      <div class="card">
+        <h2>What happens to your data</h2>
+        <table class="data-table">
+          <thead>
+            <tr><th>Data Type</th><th>Action</th><th>Retention</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Profile (username, avatar, email)</td><td><span class="tag tag-deleted">Deleted</span></td><td>Immediately on deletion</td></tr>
+            <tr><td>Division ranking &amp; points</td><td><span class="tag tag-deleted">Deleted</span></td><td>Immediately on deletion</td></tr>
+            <tr><td>Match history &amp; results</td><td><span class="tag tag-deleted">Deleted</span></td><td>Immediately on deletion</td></tr>
+            <tr><td>Cup Competition records</td><td><span class="tag tag-deleted">Deleted</span></td><td>Immediately on deletion</td></tr>
+            <tr><td>Anonymised usage analytics</td><td><span class="tag tag-retained">Retained</span></td><td>Up to 90 days, no personal identifiers</td></tr>
+            <tr><td>Fraud / abuse logs (if applicable)</td><td><span class="tag tag-retained">Retained</span></td><td>Up to 180 days for legal compliance</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="contact-box">
+      <strong>Need help or want to request deletion by email?</strong><br/>
+      If you cannot access the app or need manual deletion assistance, contact us at:<br/>
+      <a href="mailto:globalfootballchallange@gmail.com">globalfootballchallange@gmail.com</a><br/><br/>
+      Please include your registered username or email address. We will process your request within <strong>7 business days</strong>.
+    </div>
+    <footer>&copy; 2026 Global Football Challenge – GFC. All rights reserved.</footer>
+  </div>
+</body>
+</html>
